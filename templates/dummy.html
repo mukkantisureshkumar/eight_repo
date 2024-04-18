@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Document</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/mdb.dark.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.dark.min.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.dark.rtl.min.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.rtl.min.css' %}"> 
+    {% block link_block %}
+   <link rel="stylesheet" href="{% static 'css/register.css' %}">
+   <link rel="stylesheet" href="{% static 'css/login.css' %}">
+   <link rel="stylesheet" href="{% static 'css/home.css' %}">
+   {% endblock %}
+</head>
+<body>
+    <div class="nav justify-content-center">
+        <nav>
+            <a class="btn btn-primary" href="{% url 'login' %}">login</a>
+            <a class="btn btn-success" href="{% url 'home' %}">home</a>
+            <a class="btn btn-danger" href="{% url 'registration' %}">registration</a>
+        </nav>
+    </div>
+    <script src="{% static 'js/mdb.es.min.js' %}"></script>
+    <script src="{% static 'js/mdb.es.min.js.map' %}"></script>
+    <script src="{% static 'js/mdb.umd.min.js' %}"></script>
+    <script src="{% static 'js/mdb.umd.min.js.map' %}"></script> 
+    {% block body_block %}
+    {% endblock %}
+</body>
+</html>
